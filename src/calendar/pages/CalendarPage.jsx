@@ -5,6 +5,7 @@ import { addHours } from "date-fns";
 import { getMessagesES, localizer } from "../../helpers";
 import { CalendarEvent } from "./components/CalendarEvent";
 import { useState } from "react";
+import { CalendarModal } from "./components/CalendarModal";
 
 const events = [
   {
@@ -69,7 +70,7 @@ export const CalendarPage = () => {
         onSelectEvent={onSelect}
         onView={onViewChanged}
       />
-      )
+      <CalendarModal/>
     </>
   );
 };
